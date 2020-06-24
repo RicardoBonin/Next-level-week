@@ -80,3 +80,16 @@
 #modal form button:hover {
   background-color: #2fb852;
 }
+
+/*Isto é para o mdal point created */
+#modal.point .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#modal.point h1 {
+  color: white;
+
+  margin-top: 32px;
+}

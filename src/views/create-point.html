@@ -8,12 +8,14 @@
 
 {% block styles %}
   <link rel="stylesheet" href="/styles/create-point.css"/>
+  <link rel="stylesheet" href="/styles/modal.css"/>
+
 {% endblock styles %}
 
 {% block content %}
   {% include "partials/page-header.html" %}
 
-  <form action="">
+  <form action="/savepoint" method="POST">
     <h1>Cadastro do ponto de coleta</h1>
 
     <fieldset>
@@ -26,8 +28,8 @@
           <input type="text" name="name" id="" required="required"/>
         </div>
         <div class="field">
-          <label for="name">Imagem da entidade</label>
-          <input type="url" name="name" id="" placeholder="http://" required="required"/>
+          <label for="image">Imagem da entidade</label>
+          <input type="url" name="image" id="" placeholder="http://" required="required"/>
         </div>
       </div>
 
@@ -96,7 +98,15 @@
 
     <button type="submit">Cadastrar ponto de coleta</button>
   </form>
+
 {% endblock content %}
+
+{% block modal %}
+  {% if saved %}
+    {%include "partials/point-created.html"%}
+  {% endif %}
+{% endblock modal %}
+
 {% block scripts %}
   <script src="./scripts/create-point.js"></script>
 {% endblock scripts %}

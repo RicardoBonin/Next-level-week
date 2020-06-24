@@ -1,6 +1,11 @@
 const express = require("express");
 const e = require("express");
 const server = express();
+
+//Pegar o BANDO DE DADOS
+
+const db = require("./database/db");
+
 // configurar pasta public
 server.use(express.static("public"));
 

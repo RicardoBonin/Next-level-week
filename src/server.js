@@ -24,6 +24,9 @@ server.get("/", (req, res) => {
 });
 
 server.get("/create-point", (req, res) => {
+  //req.query: Query Strings da nossa url
+  req.query;
+
   return res.render("create-point.html");
 });
 
